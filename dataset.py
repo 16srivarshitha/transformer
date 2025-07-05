@@ -37,7 +37,7 @@ class TranslationDataset(Dataset):
 
 def create_dataloaders(model_config,training_config):
     # Load dataset
-    dataset = load_dataset('wmt14', 'de-en', split='train').select(range(10000))
+    dataset = load_dataset('opus100', 'de-en', split='train').select(range(10000))
     
     # Initialize tokenizer
     tokenizer = AutoTokenizer.from_pretrained('bert-base-uncased')
