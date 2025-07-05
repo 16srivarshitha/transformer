@@ -1,4 +1,5 @@
 import torch
+torch.cuda.empty_cache()
 import torch.nn as nn
 from embeddings import TokenEmbedding
 from adaptive_positional_encoding import AdaptivePositionalEncoding
