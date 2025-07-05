@@ -3,9 +3,9 @@ from dataclasses import dataclass
 @dataclass
 class TrainingConfig:
     # Training params
-    batch_size: int = 8
+    batch_size: int = 4
     learning_rate: float = 1e-4
-    num_epochs: int = 100
+    num_epochs: int = 10
     warmup_steps: int = 4000
     max_grad_norm: float = 1.0
     label_smoothing: float = 0.1
@@ -33,4 +33,4 @@ class TrainingConfig:
     # Device
     device: str = "cuda"
     mixed_precision: bool = True
-    compile_model: bool = True
+    compile_model: bool = False
